@@ -8,5 +8,5 @@ self.__uv$config = {
     bundle: '/uv/uv.bundle.js',
     config: '/uv/uv.config.js',
     sw: '/uv/uv.sw.js',
-    wisp: 'wss://anura.pro/wisp/',
+    bare: 'https://bare.operationidlehands.com/',
 };

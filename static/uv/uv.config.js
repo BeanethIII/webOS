@@ -8,5 +8,5 @@ self.__uv$config = {
     bundle: '/uv/uv.bundle.js',
     config: '/uv/uv.config.js',
     sw: '/uv/uv.sw.js',
-    bare: 'https://bare.operationidlehands.com/',
+    bare: 'https://bare-server-node-1y7e.onrender.com/',
 };

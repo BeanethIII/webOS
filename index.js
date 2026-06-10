@@ -12,16 +12,18 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static("static"));
-const server = createServer();
+const server = createServer(app);
 
 server.on("request", (req, res) => {
   app(req, res);
 });
 
 server.on("upgrade", (req, socket, head) => {
-  if (req.url.endsWith("/wisp/")) {
+  if (req.url && req.url.startsWith("/wisp")) {
     wisp.routeRequest(req, socket, head);
+    return;
   }
+  socket.destroy();
 });
 
 const port = parseInt("6969");
